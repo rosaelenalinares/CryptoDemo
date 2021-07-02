@@ -6,6 +6,41 @@ let requestOptions = {
 let container = document.querySelector('.mini-content')
 
 
+//ADD FAVORITES 
+// const addfavorites = (coin) => {
+//     fetch('/api/addfavorites', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(coin),
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log('Success:', data);
+//         })
+//         .catch((error) => {
+//             // console.error('Error:', error);
+//         });
+// }
+
+// const EventtoAddFavorites = (coins) => {
+//     coins.forEach((coin) => {
+//         coin.addEventListener('click', (e) => {
+//             // addfavorites(coins)
+//             alert('Added to favorites')
+//         })
+//     })
+// };
+
+// const allcrypto = () => {
+//     let allcrypto = document.getElementsByClassName('favorites')
+//     console.log(allcrypto)
+//     EventtoaAddFavorites(allcrypto)
+// };
+
+
+
 
 function CrytoPrices() {
     fetch("https://api.coinstats.app/public/v1/coins?skip=0&limit=50&currency=USD", requestOptions)
@@ -45,8 +80,33 @@ function CrytoPrices() {
                         });
                     alert("Added to favorites");
                 });
-
-            });
+            })
+            // allcrypto()
+        })
+        .catch((error) => {
+            // console.error('Error:', error);
         });
 }
 CrytoPrices()
+
+
+
+// const FavoritesBtn = document.getElementById(`${coin.imdbID}`);
+                // FavoritesBtn.addEventListener("click", (e) => {
+                    // e.preventDefault();
+                    // fetch('/api/addfavorites', {
+                    //     method: 'POST',
+                    //     headers: {
+                    //         'Content-Type': 'application/json',
+                    //     },
+                    //     body: JSON.stringify(coin),
+                    // })
+                    //     .then(response => response.json())
+                    //     .then(data => {
+                    //         console.log('Success:', data);
+                    //     })
+                    //     .catch((error) => {
+                    //         // console.error('Error:', error);
+                    //     });
+                //     alert("Added to favorites");
+                // });

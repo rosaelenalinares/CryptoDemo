@@ -65,7 +65,7 @@ const selectAllComments = () => {
     allcomments = document.querySelectorAll('.each-comment')
     console.log(allcomments)
     EventtoDeleteComments(allcomments)
-    EventtoReplyComments(allcomments)
+    // EventtoReplyComments(allcomments)
 };
 
 const EventtoDeleteComments = (comments) => {
@@ -79,48 +79,49 @@ const EventtoDeleteComments = (comments) => {
 };
 
 //ADD REPLY TO DB
-const addreply = (reply) => {
-    fetch('/api/addreply', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(reply),
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Success:', data);
-        })
-        .catch((error) => {
-            //   console.error('Error:', error);
-        });
-};
+// const addreply = (reply) => {
+//     fetch('/api/addreply', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(reply),
+//     })
+//         .then(response => response.json())
+//         .then(data => {
+//             console.log('Success:', data);
+//         })
+//         .catch((error) => {
+//             //   console.error('Error:', error);
+//         });
+// };
 
 
-const EventtoReplyComments = (comments) => {
-    comments.forEach((comment) => {
-        comment.children[2].addEventListener('click', (event) => {
-            openreply()
-        });
-    });
-};
+// const EventtoReplyComments = (comments) => {
+//     comments.forEach((comment) => {
+//         comment.children[2].addEventListener('click', (event) => {
+//             // openreply()
+//             alert('hello')
+//         });
+//     });
+// };
 
-const openreply = () => {
-    let conten = document.querySelector('#conten')
-            conten.insertAdjacentHTML('beforeend', `<div class="col-md-6" style="width: 100%">
-            <div class="widget-area no-padding blank">
-            <div class="status-upload">
-                <form>
-                            <textarea></textarea>
-                            <ul>
-                                <li><a id="delete" data-toggle="tooltip" data-placement="bottom" data-original-title="Delete"><i class="fas fa-trash-alt"></i></a></li>
-                            </ul>
-                            <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Post</button>
-                            </form>
-                            </div>
-                    </div>
-                </div>`)
-}
+// const openreply = () => {
+//     let conten = document.querySelector('#conten')
+//             conten.insertAdjacentHTML('beforeend', `<div class="col-md-6" style="width: 100%">
+//             <div class="widget-area no-padding blank">
+//             <div class="status-upload">
+//                 <form>
+//                             <textarea></textarea>
+//                             <ul>
+//                                 <li><a id="delete" data-toggle="tooltip" data-placement="bottom" data-original-title="Delete"><i class="fas fa-trash-alt"></i></a></li>
+//                             </ul>
+//                             <button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Post</button>
+//                             </form>
+//                             </div>
+//                     </div>
+//                 </div>`)
+// }
 
 
 

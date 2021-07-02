@@ -53,7 +53,7 @@ input {
     margin-top: 50px;
    }
   .pure-img-responsive {
-    padding-top: 191px;
+    padding-top: 145px;
   }
 }
 
@@ -75,7 +75,7 @@ input {
   -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
   -ms-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
   -o-box-shadow: 0 0 16px rgba(0, 0, 0, 0.05);
-  box-shadow: 0 0 16px rgba(170, 120, 120, 1);
+  box-shadow: 0 0 16px rgba(170, 120, 120, 0.05);
   float: left;
   margin-top: 30px;
   padding: 25px 30px;
@@ -97,7 +97,7 @@ input {
   width: 100%;
 }
 .status-upload form textarea {
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #d1e6e4;
   border: medium none;
   -webkit-border-radius: 4px 4px 0 0;
   -moz-border-radius: 4px 4px 0 0;

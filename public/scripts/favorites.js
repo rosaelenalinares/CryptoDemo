@@ -1,4 +1,4 @@
-// //DELETE FAVORITES
+//DELETE FAVORITES
 const DeleteFavorites = (coin) => {
     fetch('/api/delete', {
         method: 'POST',

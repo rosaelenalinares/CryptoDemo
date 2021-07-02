@@ -20,7 +20,8 @@
       href="/static/stylesheets/stylepure.css">
     <link rel="stylesheet" type="text/css"
       href="/static/stylesheets/style.css">
-    <title>My-App</title>
+    <script src="https://kit.fontawesome.com/499d0e78bd.js"
+      crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="layout">
@@ -38,11 +39,6 @@
             <li class="pure-menu-item"><a href="coins"
                 class="pure-menu-link">Cryptocurrencies</a></li>
 
-            <input
-              type="button" class="pure-button button-large get-favorites"
-              id="btn-favorites" value="Favorites" style="background-color:
-              #191818; color: #6E6E6E" />
-
             <li class="pure-menu-item"><a href="chart"
                 class="pure-menu-link">Chart</a></li>
 
@@ -51,6 +47,11 @@
               <a href="news" class="pure-menu-link">News</a>
             </li>
 
+            <input
+              type="button" class="pure-button button-large get-saved"
+              id="btn-news" value="Saved" style="background-color:
+              #191818; color: #6E6E6E" />
+
             <li class="pure-menu-item"><a href="Comment"
                 class="pure-menu-link">Room</a></li>
           </ul>
@@ -58,7 +59,7 @@
       </div>
 
       <div id="main">
-        <div class="card ms-3 mt-5" style="max-width: 90%; border: none">
+        <div id="getfavorites" class="card ms-3 mt-5" style="max-width: 90%; border: none">
 
         </div>
 

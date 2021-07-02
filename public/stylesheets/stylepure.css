@@ -57,11 +57,11 @@ h1 {
 }
 
 .pure-img-responsive {
-  max-width: 80%;
+  max-width: 89%;
   height: auto;
   padding-top: 75px;
-  -webkit-filter: opacity(56%);
-          filter: opacity(56%);
+  -webkit-filter: opacity(80%);
+          filter: opacity(80%);
 }
 
 #layout,
@@ -283,7 +283,7 @@ h1 {
 }
 
 .pop_up_form form textarea {
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #d1e6e4;
   border: medium none;
   border-radius: 4px 4px 0 0;
   color: #777777;
@@ -312,7 +312,7 @@ h1 {
 }
 
 .textarea {
-  background: none repeat scroll 0 0 #fff;
+  background: none repeat scroll 0 0 #d1e6e4;
   border: medium none;
   border-radius: 4px 4px 0 0;
   color: #777777;

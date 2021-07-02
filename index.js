@@ -56,9 +56,11 @@ app.post('/api/deletecomments', (req, res) => {
   myFirstCOntroller.deleteComments(req.body)
 });
 
-app.post('/api/addreply', (req,res) => {
-  myFirstCOntroller.addReplyToDB(req.body)
+app.post('/api/addnews', (req, res) => {
+  myFirstCOntroller.addNewToDB(req.body)
 });
+
+// app.post('/api/news', myFirstCOntroller.getNewsFromDB);
 
 
 app.listen(process.env.PORT || 4000, () => console.log("Server Up and running"));

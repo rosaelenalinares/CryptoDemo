@@ -168,6 +168,53 @@ const deleteComments = (data) => {
 // };
 
 
+//ADD NEWS TO DB
+const addNewToDB = (data) =>{
+  let db = new sqlite3.Database('db/db.myapp');
+
+  db.run(`INSERT INTO noticias (imageurl, title, body, categories, guid) VALUES (?, ?, ?, ?, ?)`, [[data.imageurl], [data.title], [data.body], [data.categories], [data.guid]], 
+  function(err) {
+    if (err) {
+      return console.log(err.message);
+    }
+    
+    console.log(`A row has been inserted with rowid ${this.lastID}`);
+  });
+
+  // close the database connection
+  db.close();
+};
+
+//GET NEWS FROM DB
+// const getNewsFromDB = (res) => {
+//   let sendData = {data: []};
+
+//   let db = new sqlite3.Database('db/db.myapp', (err) => {
+//       if (err) {
+//         console.error(err.message);
+//       }
+//       console.log('Connected to the comments database.');
+//     });
+//     db.serialize(() => {
+//       db.each(`SELECT * FROM news`, (err, row) => {
+//         if (err) {
+//           console.error(err.message);
+//         }
+//         console.log(row)
+//         sendData.data.push(row)
+//       });
+//     });
+//     db.close((err) => {
+//       if (err) {
+//         console.error(err.message);
+//       }
+//       console.log(sendData)
+//       res.send(sendData)
+//       console.log('Close the database connection.');
+//   });
+// };
+
+
 
 
 
@@ -178,4 +225,6 @@ const deleteComments = (data) => {
   exports.addCommentToDB = addCommentToDB;
   exports.getCommentsFromDB = getCommentsFromDB;
   exports.deleteComments = deleteComments;
+  exports.addNewToDB = addNewToDB;
+  // exports.getNewsFromDB =  getNewsFromDB;
   // exports.addReplyToDB = addReplyToDB;
